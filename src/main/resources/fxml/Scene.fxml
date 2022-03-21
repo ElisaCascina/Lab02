@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.alien.FXMLController">
@@ -12,4 +18,31 @@
          </font>
       </Label>
    </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="34.0" prefWidth="375.0">
+               <children>
+                  <Label text="Alien text">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtParola">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#handleTranslate" text="Translate">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TextArea fx:id="txtResult" editable="false" prefHeight="200.0" prefWidth="200.0" />
+            <Button alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handleClear" text="Clear Dicionary" />
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
